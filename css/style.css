@@ -1,0 +1,189 @@
+@charset "UTF-8";
+
+/* header */
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 1px solid #000;
+    height: 270px;
+}
+
+.container {
+    max-width: 1000px;
+    padding: 0 3%;
+    margin: 0 auto;
+    border: 1px solid #f70909;
+    /* margin-top: 40px; */
+}
+
+
+
+header img {
+    width: 120px;
+
+}
+
+header ul {
+    display: flex;
+    justify-content: space-between;
+}
+
+header li {
+    list-style: none;
+    margin-right: 15px;
+}
+
+header li a {
+    color: #000;
+    text-decoration: none;
+}
+
+header li a:hover {
+    opacity: 0.5;
+    
+}
+header ul li img {
+    width: 20px;
+}
+
+
+/* .mainvisual */
+.mainvisual img {
+    /* margin-top: 40px; */
+    width: 100%;
+    height: 420px;
+}
+
+.pc {
+    display: block;
+}
+
+.sp  {
+    display: none;
+}
+
+/* about */
+.section-title {
+    margin: 120px 0 80px 0;
+    text-align: center;
+}
+
+.about p {
+    text-align: left;
+    margin-bottom: 15px;
+}
+
+
+/* works */
+
+.works .photos {
+    /* display: flex; */
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 15px;
+}
+
+.works .photos img {
+    width: calc(100% / 3);
+    width: 100%;
+}
+
+/* news */
+.news dl {
+    display: flex;
+    border-top: 1px solid rgb(196, 191, 191);
+    border-bottom: 1px solid rgb(196, 191, 191);
+    line-height: 40px;
+
+}
+
+.news dt {
+    margin-right: 40px;
+}
+
+/* contact */
+input, textarea {
+    border: 1px solid #cbcaca;
+}
+
+.form dl {
+    display: flex;
+    margin: 3px 0;
+}
+
+.form dt {
+    width: 20%;
+}
+
+.form dd {
+    width: 80%;
+}
+
+dl input, dl textarea {
+    width: 100%;
+    padding: 5px ;
+}
+
+textarea {
+    margin-bottom: 30px;
+}
+
+.contact-submit {
+    margin: 0 auto;
+    background: #000;
+    color: white;
+    padding: 10px 70px;
+    display: block;
+}
+
+.contact-submit:hover {
+    background: white;
+    color: #000;
+}
+
+
+/* footer */
+footer{
+    height: 20px;
+    background: #000;
+    margin-top: 130px;
+}
+
+footer P {
+    color: white;
+    text-align: center;
+    font-size: 8px;
+}
+/* responsive */
+@media (max-width:600px) {
+    header .container {
+        flex-direction: column;
+        height: fit-content;
+    }
+
+    .pc {
+        display: none;
+    }
+
+    .sp {
+        display: block;
+    }
+
+    .works .photos {
+        grid-template-columns: none;
+    }
+
+    .news dl {
+        flex-direction: column;
+    }
+
+    .form dl {
+        flex-direction: column;
+    }
+
+    .form dd {
+        width: 100%;
+    }
+
+}
